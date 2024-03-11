@@ -15,7 +15,7 @@ public class BoardController {
 	
 	@GetMapping("/home.do")
 	public String GoHome() {
-
+		System.out.println("git test");
 		return "home";
 	}
 	
