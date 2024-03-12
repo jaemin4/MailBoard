@@ -7,6 +7,9 @@
 			select * from mailboard order by idx desc;
 		</select>
 	
+		<insert id = "boardInsert" parameterType="kr.smhrd.entity.Board">
+			insert into mailboard(title,content,writer) values(#{title},#{content},#{writer});		
+		</insert>
 	
 	
 	</mapper>

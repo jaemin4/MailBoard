@@ -14,7 +14,7 @@
 <body>
  
 <div class="container">
-  <h2>Spring MVC01</h2>
+  <h2>Template</h2>
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">Panel Content</div>

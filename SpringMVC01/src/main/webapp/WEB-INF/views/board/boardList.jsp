@@ -15,7 +15,7 @@
 <body>
  
 <div class="container">
-  <h2>Spring MVC01</h2>
+  <h2>Board List</h2>
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
@@ -38,7 +38,7 @@
        </table>    
        <a href="boardForm.do" class="btn btn-primary btn-sm">글쓰기</a>
     </div>
-    <div class="panel-footer">게시판</div>
+    <div class="panel-footer">게시판_오재민</div>
   </div>
 </div>
 
