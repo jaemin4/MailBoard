@@ -14,5 +14,13 @@
 		<select id = "boardContent" resultType="kr.smhrd.entity.Board">
 			select * from mailboard where idx=#{idx};
 		</select>
+		
+		<delete id = "boardDelete" parameterType="kr.smhrd.entity.Board">
+			delete from mailboard where idx=#{idx};
+		</delete>
+		
+		<update id = "boardUpdate" parameterType="kr.smhrd.entity.Board">
+			update mailboard set title=#{title},content=#{content} where idx=#{idx};
+		</update>
 	
 	</mapper>

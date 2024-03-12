@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -56,6 +57,29 @@ public class BoardController {
 		return "board/boardContent";
 	}
 	
+	@GetMapping("boardDelete.do/{idx}") //삭제하기
+	public String boardDelete(@PathVariable("idx") int idx) { 
+		
+		mapper.boardDelete(idx);
+		
+		return "redirect:/boardList.do";
+	}
+	
+	@GetMapping("boardUpdateForm.do/{idx}") //수정 폼으로 가기
+	public String boardModify(@PathVariable("idx") int idx,Model model) {
+		
+		Board vo = mapper.boardContent(idx);
+		model.addAttribute("vo",vo);
+		
+		return "board/boardUpdate";
+	}
+	
+	@PostMapping("boardUpdate.do") //수정하기
+	public String boardUpdate(Board vo) {
+		
+		mapper.boardUpdate(vo);
+		return "redirect:/boardList.do";
+	}
 	
 	
 }

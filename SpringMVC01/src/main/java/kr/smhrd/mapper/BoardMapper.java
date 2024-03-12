@@ -12,5 +12,7 @@ import kr.smhrd.entity.Board;
 		public List<Board> getLists();
 		public void boardInsert(Board vo);
 		public Board boardContent(int idx);
+		public void boardDelete(int idx);
+		public void boardUpdate(Board vo);
 		
 	}
