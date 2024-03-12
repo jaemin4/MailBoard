@@ -11,5 +11,6 @@ import kr.smhrd.entity.Board;
 	public interface BoardMapper {
 		public List<Board> getLists();
 		public void boardInsert(Board vo);
+		public Board boardContent(int idx);
 		
 	}

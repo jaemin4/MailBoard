@@ -11,5 +11,8 @@
 			insert into mailboard(title,content,writer) values(#{title},#{content},#{writer});		
 		</insert>
 	
+		<select id = "boardContent" resultType="kr.smhrd.entity.Board">
+			select * from mailboard where idx=#{idx};
+		</select>
 	
 	</mapper>

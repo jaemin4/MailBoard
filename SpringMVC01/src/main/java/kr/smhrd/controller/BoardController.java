@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.smhrd.entity.Board;
 import kr.smhrd.mapper.BoardMapper;
@@ -25,7 +26,7 @@ public class BoardController {
 		return "home";
 	}
 	
-	@GetMapping("/boardList.do")
+	@GetMapping("/boardList.do") //글 목록 기능
 	public String boardList(Model model) {
 
 		List<Board> list = mapper.getLists();
@@ -33,17 +34,26 @@ public class BoardController {
 		
 		return "board/boardList";
 	}
-	@GetMapping("boardForm.do")
+	@GetMapping("boardForm.do") //글작성 페이지 이동
 	public String boardForm() {
 		return "board/boardForm";
 	}
 	
-	@PostMapping("boardInsert.do")
+	@PostMapping("boardInsert.do") //글쓰기 기능
 	public String boardInsert(Board vo) {
 		
 		mapper.boardInsert(vo);
 		
 		return "redirect:/boardList.do";
+	}
+	
+	@GetMapping("boardContent.do")
+	public String boardContent(@RequestParam("idx") int idx,Model model) {
+		
+		Board vo = mapper.boardContent(idx);
+		model.addAttribute("vo",vo);
+		
+		return "board/boardContent";
 	}
 	
 	
