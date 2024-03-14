@@ -153,7 +153,7 @@
 	    </div>	
 	  </div>
 	</div>    
-    <div class="panel-footer">스프1탄_인프런(박매일)</div>
+    <div class="panel-footer">회원가입 페이지</div>
   </div>
 </div>
 </body>

@@ -8,5 +8,9 @@
             values(#{memID},#{memPassword},#{memName},#{memAge},#{memGender},#{memEmail})
 		</insert>
 	
+		<select id = "memberLogin" resultType = "kr.smhrd.entity.Member">
+			select * from mailmembers where memPassword=#{memPassword} and memID=#{memID}
+		</select>
+
 
 	</mapper>

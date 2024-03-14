@@ -13,5 +13,6 @@ import kr.smhrd.entity.Member;
 	@Mapper
 	public interface MemberMapper {
 		public int memberJoin(Member member);
+		public Member memberLogin(Member member);
 		
 	}
