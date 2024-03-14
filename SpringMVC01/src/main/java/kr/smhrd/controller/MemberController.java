@@ -23,6 +23,18 @@ public class MemberController {
 		return "member/join";  // join.jsp
 	}
 	
+	@RequestMapping("/memRegisterCheck.do")
+	public int RegisterCheck(@RequestParam("memID") String memID) {
+		
+		Member m = membermapper.memberIdCheck(memID);
+		if(m.getMemID().equals(null)) {
+			System.out.println("회원존재");
+			return 0;
+		}
+		
+		return 1;
+	}
+	
 	@RequestMapping("/memRegister.do")
 	public String join(Member member,HttpSession session) {
 		
@@ -46,7 +58,7 @@ public class MemberController {
 	public String MemberLogin(Member member,HttpSession session) {
 		
 		Member checkmem = membermapper.memberLogin(member);
-		System.out.println("로그이 컨트롤러");
+		System.out.println("로그인 컨트롤러");
 		System.out.println(checkmem );
 		
 		if(checkmem != null) {
@@ -62,10 +74,13 @@ public class MemberController {
 			return "member/memLoginForm";
 		}
 		
-		
+	}
+	@RequestMapping("/memLoginForm.do")
+	public String memLoginForm(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
 		
 	}
-	
 	
 	
 

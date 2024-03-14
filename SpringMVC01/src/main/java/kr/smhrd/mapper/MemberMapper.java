@@ -14,5 +14,6 @@ import kr.smhrd.entity.Member;
 	public interface MemberMapper {
 		public int memberJoin(Member member);
 		public Member memberLogin(Member member);
+		public Member memberIdCheck(String memID);
 		
 	}
