@@ -75,10 +75,10 @@ public class MemberController {
 		}
 		
 	}
-	@RequestMapping("/memLoginForm.do")
+	@RequestMapping("/memLogout.do")
 	public String memLoginForm(HttpSession session) {
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/home.do";
 		
 	}
 	

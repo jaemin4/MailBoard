@@ -10,12 +10,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="${contextPath}/">스프1탄</a>
+      <a class="navbar-brand" href="${contextPath}/">Index</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="${contextPath}/">Home</a></li>
-        <li><a href="boardForm.do">게시판</a></li>            
+        <li class="active"><a href="${contextPath}/home.do">Home</a></li>
+        <li><a href="${contextPath}/boardList.do">게시판</a></li>            
       </ul>
       <c:if test="${empty mvo}">
 	      <ul class="nav navbar-nav navbar-right">
@@ -29,15 +29,15 @@
 	            <li><a href="${contextPath}/memImageForm.do"><span class="glyphicon glyphicon glyphicon-picture"></span> 사진등록</a></li>
 	            <li><a href="${contextPath}/memLogout.do"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>            
 	            <c:if test="${!empty mvo}">
-			    <c:if test="${mvo.memProfile eq ''}">
-			      <li><img class="img-circle" src="${contextPath}/resources/images/person.PNG" style="width: 50px; height: 50px"/> ${mvo.memName} 님Welcome.</li>
-			    </c:if>
-			    <c:if test="${mvo.memProfile ne ''}">
+<%-- 			    <c:if test="${mvo.memProfile eq ''}">
+			      <li><img class="img-circle" src="${contextPath}/resources/images/h1.PNG" style="width: 50px; height: 50px"/> ${mvo.memName} 님Welcome.</li>
+			    </c:if> --%>
+		<%-- 	    <c:if test="${mvo.memProfile ne ''}">
 			      <li><img class="img-circle" src="${contextPath}/resources/upload/${mvo.memProfile}" style="width: 50px; height: 50px"/> ${mvo.memName} 님Welcome.</li>
-			    </c:if>			  
+			    </c:if>	 --%>	 	  
 			  </c:if>
 	      </ul>
-      </c:if>
+      </c:if> 
     </div>
   </div>
 </nav>

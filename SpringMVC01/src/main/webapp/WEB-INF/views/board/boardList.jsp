@@ -15,6 +15,8 @@
 <body>
  
 <div class="container">
+<jsp:include page="../common/header.jsp"/>      
+
   <h2>Board List</h2>
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>

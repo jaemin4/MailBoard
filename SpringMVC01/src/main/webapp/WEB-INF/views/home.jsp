@@ -25,11 +25,11 @@
 <jsp:include page="common/header.jsp"/>      
   <div class="panel panel-default">
     <div>
-       <img src="${contextPath}/resources/images/640.jpg" style="width: 100%; height: 400px;"/>
+       <img src="${contextPath}/resources/images/h1.jpg" style="width: 100%; height: 400px;"/>
     </div>
     <div class="panel-body">
 		<ul class="nav nav-tabs">
-		  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+		  <li class="active"><a data-toggle="tab" href="${contextPath}/home.do">Home</a></li>
 		  <li><a data-toggle="tab" href="#menu1">게시판</a></li>
 		  <li><a data-toggle="tab" href="#menu2">공지사항</a></li>
 		</ul>		
